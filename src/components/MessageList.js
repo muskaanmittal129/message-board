@@ -3,7 +3,7 @@ import React from 'react';
 const MessageList = ({ messages, onDeleteMessage }) => {
   return (
     <div className="message-list">
-      {messages.map((message) => (
+      {messages?.map((message) => (
         <div key={message.id} className="message-item">
           <p>{message.source} - {message.timestamp}</p>
           <p>{message.text}</p>

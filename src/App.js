@@ -10,22 +10,35 @@ const AUTH_TOKEN = 'FPZAggtFMinDlG1r';
 function App() {
   const [messages, setMessages] = useState([]);
   const [sortAsc, setSortAsc] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetchMessages();
-  }, []);
+    fetchMessages(currentPage);
+  }, [currentPage]);
 
-  const fetchMessages = async () => {
+  const fetchMessages = async (page = 1, pageSize = 10) => {
     try {
       const response = await axios.get(`${BASE_URL}/v1/messages/`, {
         headers: {
           Authorization: AUTH_TOKEN,
+        },
+        params: {
+          page,
+          pageSize,
         },
       });
       setMessages(response.data);
     } catch (error) {
       console.error('Error fetching messages:', error);
     }
+  };
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage(currentPage - 1);
   };
 
   const postMessage = async (newMessage) => {
@@ -91,6 +104,8 @@ function App() {
         <button onClick={sortMessages}>Sort by Timestamp</button>
         <MessageList messages={messages} onDeleteMessage={deleteMessage} />
       </div>
+      <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+      <button onClick={nextPage}>Next</button>
     </div>
   );
 }
