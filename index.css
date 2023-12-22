@@ -1,21 +1,32 @@
 .app-container {
-    margin: 20px;
-  }
-  
-  .message-form {
-    margin-bottom: 20px;
-  }
-  
-  .message-list {
-    margin-top: 20px;
-  }
-  
-  .message-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  /* Shimmer.css */
+  margin: 20px;
+}
+
+.message-input-container,
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message-form button,
+.message-input-container button {
+  margin: 0 10px;
+}
+.message-form textarea {
+  width: 700px;
+  height: 40px;
+}
+
+.message-list {
+  margin-top: 40px;
+}
+
+.message-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/* Shimmer.css */
 .shimmer-wrapper {
   position: relative;
 }

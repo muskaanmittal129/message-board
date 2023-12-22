@@ -10,8 +10,6 @@ const MessageForm = ({ onPostMessage }) => {
 
   return (
     <div className="message-form">
-      <h2>Chatter</h2>
-      <p>Type something in the box below, then hit "Post"</p>
       <textarea
         value={newMessage}
         onChange={(e) => setNewMessage(e.target.value)}

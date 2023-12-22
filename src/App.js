@@ -113,25 +113,31 @@ function App() {
 
   return (
     <div className="app-container">
-      <MessageForm onPostMessage={postMessage} />
+      <h2>Chatter</h2>
+      <p>Type something in the box below, then hit "Post"</p>
+      <div className="message-input-container">
+        <MessageForm onPostMessage={postMessage} />
 
-      <button
-        onClick={deleteAllMessages}
-        disabled={!messages || messages.length === 0}
-      >
-        Delete All Messages
-      </button>
-      <button onClick={sortMessages}>Sort by Timestamp</button>
-      <MessageList
-        messages={messages}
-        onDeleteMessage={deleteMessage}
-        loading={loading}
-      />
+        <button
+          onClick={deleteAllMessages}
+          disabled={!messages || messages.length === 0}
+        >
+          Delete All
+        </button>
+        <button onClick={sortMessages}>Sort</button>
+      </div>
+      <div className="message-list-container">
+        <MessageList
+          messages={messages}
+          onDeleteMessage={deleteMessage}
+          loading={loading}
+        />
 
-      <button onClick={prevPage} disabled={currentPage === 1}>
-        Previous
-      </button>
-      <button onClick={nextPage}>Next</button>
+        <button onClick={prevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <button onClick={nextPage}>Next</button>
+      </div>
     </div>
   );
 }
