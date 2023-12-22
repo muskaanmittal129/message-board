@@ -122,7 +122,7 @@ function App() {
           onClick={deleteAllMessages}
           disabled={!messages || messages.length === 0}
         >
-          Delete All!
+          Delete All
         </button>
         <button onClick={sortMessages}>Sort</button>
       </div>
