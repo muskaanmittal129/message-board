@@ -1,0 +1,2 @@
+.app-container{margin:20px}.message-input-container,.message-form{flex-wrap:wrap;display:flex}.message-form button,.message-input-container button{margin:0 10px}.message-list{margin-top:40px}.message-item{border:1px solid #ccc;margin-bottom:10px;padding:10px}.shimmer-wrapper{position:relative}.shimmer{background:linear-gradient(90deg,#f6f7f8 4%,#eaebed 25%,#f6f7f8 36%);width:100%;height:100px;margin:10px 0;animation:1.5s infinite shimmer}@keyframes shimmer{to{background-position:-200% 0}}
+/*# sourceMappingURL=index.241822c2.css.map */
