@@ -2,13 +2,13 @@
   "name": "message-board",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "http://muskaanmittal129.github.io/message-board",
   "scripts": {
     "start": "set PORT=3001 && parcel index.html",
     "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
