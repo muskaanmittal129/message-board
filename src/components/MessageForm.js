@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const MessageForm = ({ onPostMessage }) => {
-  const [newMessage, setNewMessage] = useState('');
+  const [newMessage, setNewMessage] = useState("");
 
   const handlePostMessage = () => {
     onPostMessage(newMessage);
-    setNewMessage('');
+    setNewMessage("");
   };
 
   return (
@@ -17,7 +17,7 @@ const MessageForm = ({ onPostMessage }) => {
         onChange={(e) => setNewMessage(e.target.value)}
         placeholder="Enter your message..."
       />
-      <button onClick={handlePostMessage}>Post</button>
+      <button onClick={handlePostMessage}>Post!</button>
     </div>
   );
 };
