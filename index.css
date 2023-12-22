@@ -12,10 +12,6 @@
 .message-input-container button {
   margin: 0 10px;
 }
-.message-form textarea {
-  width: 700px;
-  height: 40px;
-}
 
 .message-list {
   margin-top: 40px;
